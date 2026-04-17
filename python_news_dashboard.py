@@ -50,7 +50,7 @@ def get_news():
         response = requests.get(source["url"], headers=headers)
         feed = feedparser.parse(response.content)
 
-        for entry in feed.entries[:3]:
+        for entry in feed.entries[:10]:
             summary = ""
 
             if hasattr(entry, "summary"):
